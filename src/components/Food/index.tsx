@@ -5,13 +5,12 @@ import { useState } from 'react';
 import {FoodType} from '../../pages/Dashboard';
 
 interface FoodProps {
-  key: number;
   food: FoodType;
   handleDeleteFood: (id:number) => void;
   handleEditFood: (food:FoodType) => void;
 }
 
-export function Food({key, food, handleDeleteFood, handleEditFood}:FoodProps) {
+export function Food({ food, handleDeleteFood, handleEditFood}:FoodProps) {
   const [isAvailable, setIsAvailable] = useState(food.available);
   
   async function toggleAvailable() {
@@ -64,7 +63,7 @@ export function Food({key, food, handleDeleteFood, handleEditFood}:FoodProps) {
                 id={`available-switch-${food.id}`}
                 type="checkbox"
                 checked={isAvailable}
-                onChange={() => toggleAvailable}
+                onChange={toggleAvailable}
                 data-testid={`change-status-food-${food.id}`}
               />
               <span className="slider" />

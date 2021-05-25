@@ -44,7 +44,7 @@ export function Dashboard() {
 
     try {
       const foodUpdated = await api.put(
-      `/foods/${food.id}`,
+      `/foods/${editingFood.id}`,
       {...editingFood, ...food},
       );
 
