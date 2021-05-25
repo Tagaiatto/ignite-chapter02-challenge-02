@@ -3,7 +3,7 @@ import { FiCheckSquare } from 'react-icons/fi';
 import {FormHandles} from '@unform/core';
 import {FoodType} from '../../pages/Dashboard';
 
-import Modal from '../Modal';
+import {Modal} from '../Modal';
 import Input from '../Input';
 
 import { Form } from './styles';
