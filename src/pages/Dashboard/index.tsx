@@ -2,8 +2,8 @@ import {useEffect, useState} from 'react';
 import {Header} from '../../components/Header';
 import api from '../../services/api';
 import {Food} from '../../components/Food';
-import ModalAddFood from '../../components/ModalAddFood';
-import ModalEditFood from '../../components/ModalEditFood';
+import {ModalAddFood} from '../../components/ModalAddFood';
+import {ModalEditFood} from '../../components/ModalEditFood';
 import { FoodsContainer } from './styles';
 
 export interface FoodType {
@@ -15,14 +15,6 @@ export interface FoodType {
   image: string;
 }
 
-// {
-//   "id": 1,
-//   "name": "Ao molho",
-//   "description": "Macarrão ao molho branco, fughi e cheiro verde das montanhas",
-//   "price": "19.90",
-//   "available": true,
-//   "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png"
-// },
 export function Dashboard() {
   const [foods, setFoods] = useState<FoodType[]>([]);
   const [editingFood, setEditingFood] = useState<FoodType>({} as FoodType);
